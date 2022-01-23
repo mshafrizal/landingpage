@@ -1,0 +1,42 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/bootstrap/scss/functions";
+
+$body-bg: #000;
+$body-color: #111;
+$primary: #1C3763;
+$secondary: #BB3B56;
+
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+
+.form-control:focus {
+  border-color: $secondary;
+  box-shadow: 0 0 14px rgba(28, 55, 99, 0.3);
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: var(--eon-primary-blue);
+  border-color: var(--eon-primary-blue);
+  &:hover,
+  &:focus {
+    background-color: var(--eon-primary-red);
+    border-color: var(--eon-primary-red);
+    box-shadow: 0 0 14px rgba(0,0,0,0.3);
+  }
+  &:active {
+    background-color: darken($secondary, 10%);
+    border-color: darken($secondary, 10%);
+    outline: $secondary;
+  }
+  &:active{
+    &:focus{
+      box-shadow: 0 0 14px rgba(187, 59, 86, 0.3);
+    }
+  }
+}
+
